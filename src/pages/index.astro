@@ -2,31 +2,83 @@
 import Base from '../layouts/Base.astro';
 import '../styles.css';
 ---
-<Base title="VELTRIX — Infrastructure, simplified" description="A clear, unified platform for managing your infrastructure.">
-  <section class="container hero">
-    <div>
-      <div class="eyebrow">Infrastructure, simplified</div>
-      <h1>More control.<br/><span>Less complexity.</span></h1>
-      <p class="lead">A connected platform for managing devices, services and websites — with the clarity and control your infrastructure deserves.</p>
-      <div class="hero-actions"><a class="button button-dark" href="/product/">Explore the platform <span>↗</span></a><a class="button button-light" href="/download/">Get started</a></div>
-      <div class="hero-note">Built by NexLab · Designed for independent builders</div>
+<Base title="VELTRIX Dock — хостинг на вашем Android-телефоне" description="VELTRIX Dock превращает Android-телефон в полноценный сервер с веб-панелью. Управляйте сайтами, базами данных и доменами с любого устройства.">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="status-dot"></span> SELF-HOSTING · ANDROID</div>
+      <h1>Хостинг на вашем <span>Android-телефоне.</span><br/><em>Без VPS. Без Docker.</em></h1>
+      <p class="hero-lead">VELTRIX Dock превращает старый телефон в полноценный сервер с веб-панелью. Управляйте сайтами, базами данных и доменами с любого устройства.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/NexLab-ceo/veltrix-dock/releases" target="_blank" rel="noreferrer">Скачать <span>↓</span></a>
+        <a class="button button-secondary" href="https://docs.veltrix.com" target="_blank" rel="noreferrer">Документация <span>↗</span></a>
+      </div>
+      <div class="hero-meta"><span><i></i> Работает на Termux</span><span><i></i> ARM64 · Android</span><span><i></i> Статический сайт</span></div>
     </div>
-    <div class="visual" aria-label="Abstract VELTRIX platform illustration">
-      <span class="visual-label label-a">One platform</span><span class="visual-label label-b">Your infrastructure</span>
-      <span class="orbit-dot dot-a"></span><span class="orbit-dot dot-b"></span><span class="orbit-dot dot-c"></span>
-      <div class="orbit-core">V</div>
+    <div class="dashboard-wrap" aria-label="Предпросмотр интерфейса VELTRIX Dock">
+      <div class="dashboard-glow"></div>
+      <div class="dashboard">
+        <div class="dash-top"><div class="dash-brand"><span class="dash-mark">V</span> VELTRIX <b>DOCK</b></div><div class="dash-user"><span></span> Redmi 9</div></div>
+        <div class="dash-body">
+          <aside class="dash-side"><div class="side-active">▦ <span>Обзор</span></div><div>◫ <span>Сайты</span></div><div>▤ <span>Базы данных</span></div><div>⌁ <span>Домены</span></div><div>⌘ <span>Устройства</span></div><div>⚙ <span>Настройки</span></div><div class="side-bottom">◉ <span>Система</span></div></aside>
+          <div class="dash-content">
+            <div class="dash-heading"><div><small>WORKSPACE / OVERVIEW</small><h3>Добро пожаловать</h3></div><span class="online"><i></i> Система онлайн</span></div>
+            <div class="stat-grid"><div class="stat"><small>САЙТЫ</small><strong>03</strong><span>2 работают</span></div><div class="stat"><small>CPU</small><strong>18<span>%</span></strong><span>Нагрузка</span></div><div class="stat"><small>RAM</small><strong>2.4<span> GB</span></strong><span>Используется</span></div></div>
+            <div class="site-panel"><div class="panel-title">Ваши сайты <span>Все сайты ↗</span></div><div class="site-line"><span class="site-icon">N</span><div><b>nexlab.dev</b><small>PHP · Production</small></div><span class="site-state"><i></i> Работает</span></div><div class="site-line"><span class="site-icon muted-icon">A</span><div><b>api.example.dev</b><small>Go · Production</small></div><span class="site-state"><i></i> Работает</span></div></div>
+            <div class="dash-terminal"><span>●</span> deploy completed <b>·</b> 2.4s <small>LIVE LOGS</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="float-chip chip-top"><span class="pulse"></span> Сервер активен</div>
+      <div class="float-chip chip-bottom">↗ <b>Управление</b> из браузера</div>
     </div>
   </section>
-  <section class="section" style="background:#fff">
-    <div class="container">
-      <div class="section-head"><div><div class="eyebrow">The platform</div><h2 style="margin-top:18px">Everything connected.<br/>Nothing in the way.</h2></div><p>Bring the essential parts of your infrastructure into one clear workspace. Start small, expand when you need to.</p></div>
-      <div class="feature-grid">
-        <article class="feature-card"><div class="feature-icon">⌘</div><h3>One workspace</h3><p>Keep devices, websites and services organised in a single place.</p></article>
-        <article class="feature-card"><div class="feature-icon">↗</div><h3>Deploy with clarity</h3><p>Understand what is running, where it lives and what changed.</p></article>
-        <article class="feature-card"><div class="feature-icon">◌</div><h3>Built to extend</h3><p>A modular approach that can grow alongside your infrastructure.</p></article>
+
+  <section class="trust-strip"><div class="wrap trust-inner"><span>СОБСТВЕННЫЙ СЕРВЕР</span><b>ANDROID + TERMUX</b><span class="trust-sep">/</span><b>OPEN TOOLING</b><span class="trust-sep">/</span><b>БЕЗ АРЕНДЫ VPS</b></div></section>
+
+  <section class="section wrap" id="how-it-works">
+    <div class="section-heading"><div><div class="eyebrow">БЫСТРЫЙ СТАРТ</div><h2>Три шага —<br/><span>и сервер готов.</span></h2></div><p>Не нужно разбираться в Docker или арендовать виртуальную машину. Достаточно Android-телефона и нескольких минут.</p></div>
+    <div class="steps-grid">
+      <article class="step-card"><div class="step-top"><span class="step-number">01</span><span class="step-symbol">↓</span></div><h3>Установите Termux</h3><p>Скачайте Termux из F-Droid. Это терминал Linux для Android, в котором работает VELTRIX Dock.</p><a class="text-link" href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noreferrer">Скачать Termux <span>↗</span></a></article>
+      <article class="step-card"><div class="step-top"><span class="step-number">02</span><span class="step-symbol">⌘</span></div><h3>Установите пакет</h3><p>Скачайте актуальный <code>.deb</code> из GitHub Releases и установите его одной командой:</p><div class="code-line"><code>pkg install ./veltrix-all_*.deb</code><button class="copy-command" data-copy="pkg install ./veltrix-all_*.deb" aria-label="Скопировать команду">⧉</button></div><a class="text-link" href="https://github.com/NexLab-ceo/veltrix-dock/releases" target="_blank" rel="noreferrer">Открыть релизы <span>↗</span></a></article>
+      <article class="step-card"><div class="step-top"><span class="step-number">03</span><span class="step-symbol">↗</span></div><h3>Откройте панель</h3><p>Перейдите в веб-панель с телефона или другого устройства и создайте свой первый сайт.</p><a class="text-link" href="https://docs.veltrix.com" target="_blank" rel="noreferrer">Инструкция по запуску <span>↗</span></a></article>
+    </div>
+    <p class="step-footnote">Пакет <code>veltrix-all</code> предназначен для основного телефона и включает Dock вместе с Agent. Перед установкой проверьте имя и архитектуру файла в релизе.</p>
+  </section>
+
+  <section class="features-section" id="features">
+    <div class="wrap">
+      <div class="section-heading"><div><div class="eyebrow">ВОЗМОЖНОСТИ</div><h2>Всё необходимое.<br/><span>В одном месте.</span></h2></div><p>Управляйте своим небольшим сервером через понятную веб-панель — без постоянной работы в терминале.</p></div>
+      <div class="features-grid">
+        <article class="feature-card"><span class="feature-icon">⌘</span><h3>Управление сайтами</h3><p>Запускайте, останавливайте и развёртывайте сайты. Смотрите логи в реальном времени.</p><span class="feature-index">01 / SITES</span></article>
+        <article class="feature-card"><span class="feature-icon">▤</span><h3>Базы данных</h3><p>PostgreSQL, управление базами и ролями, резервное копирование данных.</p><span class="feature-index">02 / DATABASES</span></article>
+        <article class="feature-card"><span class="feature-icon">⑂</span><h3>Git-деплой</h3><p>Подключите GitHub-репозиторий — Dock скачает исходный код для развёртывания.</p><span class="feature-index">03 / DEPLOY</span></article>
+        <article class="feature-card"><span class="feature-icon">⌁</span><h3>Cloudflare Tunnel</h3><p>Подключайте домен и HTTPS без белого IP-адреса и проброса портов.</p><span class="feature-index">04 / NETWORK</span></article>
+        <article class="feature-card"><span class="feature-icon">◴</span><h3>Мониторинг</h3><p>Следите за CPU, оперативной памятью и температурой телефона.</p><span class="feature-index">05 / MONITORING</span></article>
+        <article class="feature-card"><span class="feature-icon">⇄</span><h3>Удалённый доступ</h3><p>Используйте Tailscale, чтобы управлять сервером с любого своего устройства.</p><span class="feature-index">06 / REMOTE</span></article>
       </div>
     </div>
   </section>
-  <section class="section"><div class="container split"><div><div class="eyebrow">A calmer way to operate</div><h2 style="margin:20px 0">Your infrastructure should feel understandable.</h2><p>VELTRIX brings operational tools into a focused experience. Spend less time jumping between utilities and more time building what matters.</p><a class="button button-dark" href="/product/">Discover VELTRIX <span>↗</span></a></div><div class="split-panel"><span class="tag">VELTRIX / SYSTEM</span><div class="big">01—03</div><div><strong>Devices · Sites · Services</strong><p>One consistent place to see the bigger picture.</p></div></div></div></section>
-  <section class="band"><div class="container band-inner"><div><div class="eyebrow" style="color:#a9baff">Get started</div><h2 style="margin-top:20px">Build your setup.<br/>Keep control.</h2><p>Explore the platform and find the right starting point for your environment.</p></div><a class="button button-white" href="/download/">Explore downloads <span>↗</span></a></div></section>
+
+  <section class="proof-section wrap" id="proof">
+    <div class="proof-card">
+      <div class="proof-copy"><div class="eyebrow"><span class="status-dot"></span> РАБОТАЕТ В РЕАЛЬНОСТИ</div><h2>Этот сайт работает на <span>Redmi 9.</span></h2><p>VELTRIX Dock управляет им прямо сейчас. Сервер помещается в кармане — и остаётся под вашим контролем.</p><small>Мы не используем VPS. Только телефон, Termux и открытый код.</small></div>
+      <div class="proof-device"><div class="phone"><div class="phone-camera"></div><div class="phone-screen"><div class="phone-logo">V</div><b>VELTRIX</b><span>SERVER ONLINE</span><div class="phone-wave"></div><small>REDMI 9 · ANDROID</small></div></div><div class="proof-orbit orbit-one"></div><div class="proof-orbit orbit-two"></div><div class="proof-live"><i></i> LIVE SERVER</div></div>
+    </div>
+  </section>
+
+  <section class="final-cta"><div class="wrap final-inner"><div class="eyebrow">ТВОЙ СЕРВЕР НАЧИНАЕТСЯ ЗДЕСЬ</div><h2>Не арендуй сервер.<br/><span>Используй свой.</span></h2><p>Дай старому Android-телефону новую задачу.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/NexLab-ceo/veltrix-dock/releases" target="_blank" rel="noreferrer">Скачать VELTRIX Dock <span>↓</span></a><a class="button button-secondary" href="https://docs.veltrix.com" target="_blank" rel="noreferrer">Читать документацию <span>↗</span></a></div></div></section>
+  <script>
+    document.querySelectorAll('[data-copy]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const value = button.getAttribute('data-copy');
+        try {
+          await navigator.clipboard.writeText(value);
+          button.textContent = '✓';
+          setTimeout(() => button.textContent = '⧉', 1400);
+        } catch {
+          button.textContent = 'Выделите команду';
+        }
+      });
+    });
+  </script>
 </Base>
