@@ -1,0 +1,22 @@
+version: 1
+
+project:
+  name: veltrix-website
+  root: ./
+
+build:
+  provider: auto
+  install: npm install
+  command: npm run build
+
+run:
+  command: npm run preview -- --host 0.0.0.0
+  port: 4321
+
+healthcheck:
+  path: /
+  interval: 30s
+
+resources:
+  memory: 512Mi
+  cpu: 1
