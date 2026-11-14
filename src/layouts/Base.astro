@@ -1,0 +1,61 @@
+---
+const { title = 'VELTRIX — Infrastructure, simplified', description = 'A clear, unified way to manage your infrastructure.' } = Astro.props;
+const path = Astro.url.pathname;
+const isRu = path.startsWith('/ru');
+const links = isRu
+  ? [{ href: '/ru/', label: 'Главная' }, { href: '/product/', label: 'Платформа' }, { href: '/pricing/', label: 'Тарифы' }, { href: '/download/', label: 'Загрузки' }, { href: '/about/', label: 'О проекте' }]
+  : [{ href: '/', label: 'Home' }, { href: '/product/', label: 'Platform' }, { href: '/pricing/', label: 'Pricing' }, { href: '/download/', label: 'Downloads' }, { href: '/about/', label: 'About' }];
+---
+<!doctype html>
+<html lang={isRu ? 'ru' : 'en'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f8fa" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={isRu ? '/ru/' : '/'} aria-label="VELTRIX home">
+        <span class="brand-mark">V</span><span>VELTRIX</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        {links.map((link) => <a href={link.href} class:list={{ active: path === link.href }}>{link.label}</a>)}
+      </nav>
+      <div class="header-actions">
+        <a class="language" href={isRu ? '/' : '/ru/'}>{isRu ? 'EN' : 'RU'}</a>
+        <a class="button button-dark button-small" href="/download/">{isRu ? 'Начать' : 'Get started'} <span>↗</span></a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </header>
+    <main><slot /></main>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/"><span class="brand-mark">V</span><span>VELTRIX</span></a>
+          <p>{isRu ? 'Инфраструктура. Под вашим контролем.' : 'Infrastructure, under your control.'}</p>
+        </div>
+        <div class="footer-links">
+          <div><strong>{isRu ? 'Платформа' : 'Platform'}</strong><a href="/product/">Dock</a><a href="/product/">Agent</a><a href="/product/">Control</a></div>
+          <div><strong>{isRu ? 'Ресурсы' : 'Resources'}</strong><a href="/download/">{isRu ? 'Загрузки' : 'Downloads'}</a><a href="https://github.com/NexLab-ceo" target="_blank" rel="noreferrer">GitHub ↗</a><a href="/about/">{isRu ? 'О проекте' : 'About'}</a></div>
+          <div><strong>{isRu ? 'Документация' : 'Documentation'}</strong><a href="https://github.com/NexLab-ceo/veltrix-dock" target="_blank" rel="noreferrer">{isRu ? 'Репозиторий' : 'Repository'} ↗</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© {new Date().getFullYear()} VELTRIX · NexLab</span><span>{isRu ? 'Создано для тех, кто строит.' : 'Built for those who build.'}</span></div>
+    </footer>
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.desktop-nav');
+      toggle?.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav?.classList.toggle('nav-open', !open);
+      });
+    </script>
+  </body>
+</html>
