@@ -1,0 +1,15 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+<SiteLayout title="Documentation" description="Yevqo documentation and getting started information.">
+  <div class="page-kicker">05 / DOCUMENTATION</div>
+  <h1 class="page-title">Everything starts<br/><span>with Termux.</span></h1>
+  <p class="page-lead">Documentation for the Yevqo Agent, device setup and project workflows will live here. Until the agent is released, these notes explain the intended environment.</p>
+  <div class="page-grid">
+    <article class="page-card"><span class="card-index">GUIDE 01</span><h2>Android requirements</h2><p>An Android device with enough free storage and memory for the applications you plan to run. Battery optimization and network restrictions may affect long-running services.</p></article>
+    <article class="page-card"><span class="card-index">GUIDE 02</span><h2>Termux environment</h2><p>Termux provides a Linux-like shell and package manager without requiring root for many development workflows.</p></article>
+    <article class="page-card"><span class="card-index">GUIDE 03</span><h2>Network access</h2><p>Public access depends on your Wi-Fi router, carrier-grade NAT, firewall and network configuration. A tunnel or external host may be needed.</p></article>
+  </div>
+  <div class="page-note"><strong>Coming soon:</strong> Agent installation, pairing, project creation, deployment, logs, backups and troubleshooting guides will be added when those product features are implemented.</div>
+  <a class="page-link" href="https://github.com/NexLab-ceo" target="_blank" rel="noreferrer">Follow development on GitHub ↗</a>
+</SiteLayout>

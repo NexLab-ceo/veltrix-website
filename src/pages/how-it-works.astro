@@ -1,0 +1,15 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+<SiteLayout title="How it works" description="Learn how Yevqo is designed to turn Android and Termux into a personal server.">
+  <div class="page-kicker">02 / GETTING STARTED</div>
+  <h1 class="page-title">Your Android becomes<br/><span>the server.</span></h1>
+  <p class="page-lead">Yevqo is designed around a small agent running in Termux and a browser-based workspace for managing your projects.</p>
+  <div class="steps-list">
+    <article class="step-card"><div class="number">01</div><div><h2>Prepare Android</h2><p>Use a supported Android device and install Termux from a trusted distribution source. Update its packages before setting up development tools.</p><div class="code-line">pkg update && pkg upgrade</div></div></article>
+    <article class="step-card"><div class="number">02</div><div><h2>Set up the Yevqo Agent</h2><p>The planned agent will run inside Termux and provide the bridge between your Android environment and the Yevqo dashboard. Installation instructions will be published when the agent is released.</p></div></article>
+    <article class="step-card"><div class="number">03</div><div><h2>Connect your workspace</h2><p>Open the web dashboard to view the connected device, organize projects and manage supported services. Live connection is part of the product roadmap.</p></div></article>
+  </div>
+  <div class="page-note"><strong>Important:</strong> The Yevqo Agent and live dashboard connection are not released yet. The steps above explain the planned workflow, not a currently working installation process.</div>
+  <a class="page-link" href="/docs">Read the documentation ↗</a>
+</SiteLayout>

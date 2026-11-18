@@ -1,0 +1,21 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+const questions = [
+  ['What is Yevqo?','Yevqo is a platform being developed to turn an Android device into a personal server using Termux and a web-based management interface.'],
+  ['Do I need root access?','The intended workflow uses Termux and does not require root for typical supported operations. Some advanced system-level tasks may still be unavailable.'],
+  ['Do I need a VPS?','No dedicated VPS is required for the core idea: the Android device runs your workloads. Stable public access may require additional network infrastructure.'],
+  ['Can I host a public website?','Android can run web servers through Termux. Whether the site is reachable from the public internet depends on your carrier, router, firewall and network setup.'],
+  ['Is the Yevqo Agent available now?','Not yet. The agent and live dashboard connection are planned product components. This website is currently a frontend preview.'],
+  ['Will AI agents be included?','AI agents are part of the roadmap, but they are not available in the current preview.'],
+  ['Which languages are planned?','The starter template catalogue currently highlights static websites, Node.js, PHP and Go. Actual compatibility depends on the device and runtime.'],
+  ['Is Yevqo open source?','Check the official NexLab GitHub organization for the current source-code availability and licensing information.']
+];
+---
+<SiteLayout title="FAQ" description="Frequently asked questions about Yevqo.">
+  <div class="page-kicker">06 / QUESTIONS</div>
+  <h1 class="page-title">Good questions.<br/><span>Clear answers.</span></h1>
+  <p class="page-lead">A few things worth knowing before you turn an Android device into a server.</p>
+  <div class="faq-stack">
+    {questions.map(([q,a]) => <details><summary>{q}</summary><p>{a}</p></details>)}
+  </div>
+</SiteLayout>
