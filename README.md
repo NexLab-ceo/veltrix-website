@@ -1,31 +1,24 @@
-# VELTRIX — Official Website
+# Yevqo — Official Website
 
-A standalone, multilingual-ready Astro website for the VELTRIX platform.
+Marketing website for Yevqo, a personal server platform built around Android and Termux.
 
-## Run locally
+## Stack
+- SvelteKit + Svelte 5
+- TypeScript
+- Tailwind CSS 4
+- Lucide Svelte
 
+## Development
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
-
+## Production build
 ```bash
+npm run check
 npm run build
 npm run preview
 ```
 
-## Pages
-
-- `/` — English homepage
-- `/ru/` — Russian homepage
-- `/product/` — Platform overview
-- `/pricing/` — Pricing overview
-- `/download/` — Downloads and release information
-- `/about/` — About VELTRIX / NexLab
-
-## Notes
-
-This is the public marketing website, separate from VELTRIX Dock source code and product documentation.
-Replace placeholder destinations and contact details before publishing.
+This repository contains the public landing page only. Dashboard visuals are illustrative mockups; no backend, authentication, device connection, deployments or AI agents are implemented here.
