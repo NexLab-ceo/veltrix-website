@@ -1,24 +1,24 @@
 # Yevqo — Official Website
 
-Marketing website for Yevqo, a personal server platform built around Android and Termux.
+A static landing page for Yevqo, a personal server platform built around Android and Termux.
 
 ## Stack
-- SvelteKit + Svelte 5
+- Astro 5 (static output)
+- Svelte 5 for the interactive navigation and FAQ
 - TypeScript
-- Tailwind CSS 4
-- Lucide Svelte
+- Lucide icons
 
-## Development
+## Run locally
 ```bash
 npm install
 npm run dev
 ```
 
-## Production build
+## Build for Android / Termux
 ```bash
-npm run check
 npm run build
-npm run preview
 ```
+
+The production website is generated into `dist/`. It can be served from Android with a lightweight static HTTP server, for example `npx serve dist -l 8080`.
 
 This repository contains the public landing page only. Dashboard visuals are illustrative mockups; no backend, authentication, device connection, deployments or AI agents are implemented here.
