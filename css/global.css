@@ -42,3 +42,8 @@
   .topbar nav.open { display: flex; }
   .topbar nav a { white-space: normal; font-size: 13px; }
 }
+
+
+/* EN / RU language selector */
+.language-toggle{height:34px;min-width:42px;padding:0 9px;border:1px solid #39483a;border-radius:4px;background:#111811;color:#b9d6aa;font:700 9px var(--mono);letter-spacing:.7px;cursor:pointer;transition:border-color .2s,background .2s}.language-toggle:hover{border-color:var(--green);background:#1a261a}.nav-actions{align-items:center}
+@media(max-width:760px){.language-toggle{height:32px;min-width:38px;padding:0 7px}.nav-actions{gap:9px}}
