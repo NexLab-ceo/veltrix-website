@@ -47,3 +47,23 @@
 /* EN / RU language selector */
 .language-toggle{height:34px;min-width:42px;padding:0 9px;border:1px solid #39483a;border-radius:4px;background:#111811;color:#b9d6aa;font:700 9px var(--mono);letter-spacing:.7px;cursor:pointer;transition:border-color .2s,background .2s}.language-toggle:hover{border-color:var(--green);background:#1a261a}.nav-actions{align-items:center}
 @media(max-width:760px){.language-toggle{height:32px;min-width:38px;padding:0 7px}.nav-actions{gap:9px}}
+
+/* Documentation cards: keep category labels separate from headings */
+.steps-list .step-card{grid-template-columns:150px minmax(0,1fr);align-items:start}
+.steps-list .step-card .number{font:600 11px/1.5 var(--mono);letter-spacing:.65px;overflow-wrap:anywhere;padding-top:2px}
+.steps-list .step-card>div:last-child{min-width:0}
+@media(max-width:640px){.steps-list .step-card{grid-template-columns:1fr;gap:8px}.steps-list .step-card .number{font-size:10px}}
+/* Future product destinations */
+.nav-actions .future-admin-link{font-size:11px;color:#b6c2b4;white-space:nowrap}
+.nav-actions .future-admin-link:hover{color:var(--green)}
+.nav-actions .future-download{height:36px;padding:0 12px;border:1px solid #354235;border-radius:6px;background:#111712;color:#849084;font-size:11px;white-space:nowrap;cursor:not-allowed;opacity:.8}
+.nav-actions .future-download:disabled{pointer-events:none}
+.nav-actions .future-download span{color:var(--green);font-size:9px;margin-left:4px}
+.admin-preview{margin-top:48px;max-width:850px;border:1px solid #2c392d;border-radius:8px;background:#101611;padding:28px}
+.admin-preview h2{font:700 21px var(--display);margin:0 0 10px}
+.admin-preview p{font-size:13px;line-height:1.8;color:#929d91;margin:0}
+.admin-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.admin-preview-grid article{padding:16px;border:1px solid #2c392d;border-radius:6px;background:#0b100c}
+.admin-preview-grid b{display:block;font:600 12px var(--display);margin-bottom:7px}
+.admin-preview-grid span{font-size:10px;color:#899489;line-height:1.6}
+@media(max-width:640px){.admin-preview-grid{grid-template-columns:1fr}}
