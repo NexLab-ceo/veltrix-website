@@ -67,3 +67,9 @@
 .admin-preview-grid b{display:block;font:600 12px var(--display);margin-bottom:7px}
 .admin-preview-grid span{font-size:10px;color:#899489;line-height:1.6}
 @media(max-width:640px){.admin-preview-grid{grid-template-columns:1fr}}
+
+/* Consistent home/back navigation on every page */
+.site-page-nav{display:flex;align-items:center;gap:18px;margin:0 0 24px;font-size:11px;color:#9aa59a}
+.site-page-nav a{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid #29352a;border-radius:5px;background:#0d130e;transition:border-color .2s,color .2s}
+.site-page-nav a:hover{color:var(--green);border-color:var(--green2)}
+.site-page-nav a:first-child{color:var(--green)}
