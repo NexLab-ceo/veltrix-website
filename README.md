@@ -1,24 +1,34 @@
 # Yevqo — Official Website
 
-A static landing page for Yevqo, a personal server platform built around Android and Termux.
+A lightweight static website for Yevqo, a personal server platform built around Android and Termux.
 
-## Stack
-- Astro 5 (static output)
-- Svelte 5 for the interactive navigation and FAQ
-- TypeScript
-- Lucide icons
+## Project structure
+
+- `index.html` — homepage
+- `features/`, `how-it-works/`, `templates/`, `pricing/`, `faq/` — product pages
+- `docs/` — documentation pages
+- `css/global.css` — shared styles
+- `js/main.js` — shared navigation and FAQ interactions
+- `public/favicon.svg` — site icon
 
 ## Run locally
+
+No Node.js, package manager, framework, build step or dependencies are required.
+
+Open `index.html` directly, or start a local static server from the repository root:
+
 ```bash
-npm install
-npm run dev
+python -m http.server 8080
 ```
 
-## Build for Android / Termux
-```bash
-npm run build
-```
+Then open `http://localhost:8080`.
 
-The production website is generated into `dist/`. It can be served from Android with a lightweight static HTTP server, for example `npx serve dist -l 8080`.
+On Android, the same files can be served from Termux with Python or another static HTTP server. Keep the working directory at the repository root so relative paths resolve.
 
-This repository contains the public landing page only. Dashboard visuals are illustrative mockups; no backend, authentication, device connection, deployments or AI agents are implemented here.
+## Deployment
+
+Publish the repository root as the static document root. The entry point is `index.html`; do not configure an Astro, Vite or Node build command.
+
+## Product status
+
+This repository contains the public website only. Dashboard visuals are illustrative. The Yevqo Agent, live device pairing, backend, authentication, deployments, monitoring and AI agents are not represented as released functionality unless a page explicitly says otherwise.

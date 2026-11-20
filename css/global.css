@@ -9,3 +9,36 @@
 @media(max-width:760px){.subpage{padding-top:65px;padding-bottom:65px}.page-grid{grid-template-columns:1fr 1fr;gap:9px;margin-top:35px}.page-card{padding:17px;min-height:170px}.page-title{letter-spacing:-2px}.page-lead{font-size:13px}.step-card{grid-template-columns:42px 1fr;gap:12px;padding:17px}}
 @media(max-width:560px){.manifest-section{margin-top:60px;padding-top:35px}.manifest-grid{grid-template-columns:1fr}.manifest-code pre{font-size:10px;padding:17px}.code-header small{font-size:8px}}
 @media(max-width:480px){.page-grid{grid-template-columns:1fr}.page-card{min-height:0}.topbar{height:auto;min-height:65px;padding:12px 19px;flex-wrap:wrap;gap:8px}.topbar nav{display:flex;order:3;flex-basis:100%;margin:0;gap:19px;overflow-x:auto;padding:7px 0 3px;scrollbar-width:none}.topbar nav::-webkit-scrollbar{display:none}.topbar nav a{white-space:nowrap;font-size:11px}.nav-actions{margin-left:auto}.github-link{display:none}}
+
+
+/* Accessibility and compact-screen navigation fixes */
+:where(a,button,summary,input,select,textarea):focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+}
+@media (max-width: 480px) {
+  .topbar {
+    height: 65px;
+    min-height: 65px;
+    padding: 0 19px;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .topbar nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    margin: 0;
+    padding: 18px 22px 23px;
+    background: #0c100d;
+    border-bottom: 1px solid #293329;
+    flex-direction: column;
+    gap: 18px;
+    overflow: visible;
+  }
+  .topbar nav.open { display: flex; }
+  .topbar nav a { white-space: normal; font-size: 13px; }
+}
